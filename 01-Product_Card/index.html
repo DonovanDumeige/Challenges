@@ -16,10 +16,18 @@
 <body>
 <main class="container">
   <div class="product">
-    <img 
-    src="./assets/images/image-product-mobile.jpg" 
-    alt="Picture of the perfume 'Garielle Essence Eau de Parfum"
-    >
+    <picture>
+      <source 
+      media="(max-width: 1399px)" 
+      srcset="./assets/images/image-product-600w.jpg">
+      <source
+      media="(min-width: 1400px)"
+      srcset="./assets/images/image-product-686w.jpg">
+      <img 
+      src = "./assets/images/image-product-686w.jpg"
+      alt="Picture of the perfume 'Gabrielle Essence Eau de Parfum"
+      >
+    </picture>
   </div>
   <div class="product-data">
     <h3 class="category">Perfume</h3>
