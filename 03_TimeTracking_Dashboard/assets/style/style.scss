@@ -1,0 +1,18 @@
+@use "variables" as v;
+
+body{
+    font-family: v.$rubik;
+    background-color: v.$darkerblue;
+    color : v.$paleblue;
+    font-size: 18px;
+}
+
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center;
+    color: white;
+    a { 
+        color: white; 
+    }
+ }

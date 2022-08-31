@@ -6,7 +6,6 @@
     --grayblue : hsl(220, 15%, 55%);
     --darkblue : hsl(218, 44%, 22%);
 
-
     --outfit : 'Outfit', sans-serif;
 }
 
@@ -26,7 +25,7 @@ body{
     width : 85%;
     height : 65%;
     margin : 0 auto;
-    padding : 5px 5px 15px;
+    padding : 5px 5px 0 5px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -35,8 +34,8 @@ body{
 }
     .photo-box{
         width : 93%;
-        margin: 10px auto;
-        height : 60%;
+        margin: 10px auto 25px;
+        height : 55%;
         border-radius: 10px;
         overflow: hidden;
     }
@@ -61,3 +60,10 @@ body{
         }
 .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
+
+    @media screen and (min-width : 1439px) {
+        .container{
+            width : 22%;
+            height: 60%;
+        }
+    }
