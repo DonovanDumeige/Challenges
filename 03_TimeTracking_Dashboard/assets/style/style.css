@@ -1,8 +1,72 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap");
+*, ::before, ::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Rubik", sans-serif;
   background-color: hsl(226deg, 43%, 10%);
   color: hsl(236deg, 100%, 87%);
+}
+
+.container {
+  width: 75%;
+  height: 60%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-gap: 25px;
+}
+.container .report {
+  grid-column: 2/3;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 25px;
+}
+.container .report .item {
+  background-color: hsl(235deg, 46%, 20%);
+  border-radius: 20px;
+}
+.container .metadata {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+  border-radius: 20px;
+  background-color: hsl(246deg, 80%, 60%);
+  overflow: hidden;
+}
+.container .metadata .user {
+  background-color: hsl(246deg, 80%, 60%);
+  height: 80%;
+}
+.container .metadata .user .userphoto, .container .metadata .user .username {
+  padding: 1rem;
+}
+.container .metadata .user .userphoto {
+  width: 100%;
+}
+.container .metadata .user .userphoto img {
+  width: 30%;
+  border: 3px solid white;
+  border-radius: 50%;
+}
+.container .metadata .frequency {
+  background-color: hsl(235deg, 46%, 20%);
+}
+
+.item-title {
+  font-size: 18px;
+}
+
+.weekly, .monthly {
+  display: none;
 }
 
 .attribution {
