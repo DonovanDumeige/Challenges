@@ -1,5 +1,8 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap");
-*, ::before, ::after {
+*,
+::before,
+::after {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -11,6 +14,7 @@ body {
   color: hsl(236deg, 100%, 87%);
 }
 
+/* Container général */
 .container {
   width: 65%;
   height: 50%;
@@ -21,6 +25,10 @@ body {
   display: grid;
   grid-template-columns: 1fr 3fr;
   grid-gap: 25px;
+  /* Grid de 6 cases */
+  /* A l'intérieur d'un item de la grille :
+  modifier daily, weekly, monthly */
+  /* Colonnes de deux cases */
 }
 .container .report {
   grid-column: 2/3;
@@ -28,35 +36,127 @@ body {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
   grid-gap: 25px;
+  /* Un item */
 }
 .container .report .item {
-  background-color: hsl(235deg, 46%, 20%);
   border-radius: 20px;
+  display: grid;
+  grid-template-rows: 16% 1fr;
+}
+.container .report .item:nth-child(1) {
+  background-color: hsl(15deg, 100%, 70%);
+}
+.container .report .item:nth-child(2) {
+  background-color: hsl(195deg, 100%, 68%);
+}
+.container .report .item:nth-child(3) {
+  background-color: hsl(348deg, 100%, 68%);
+}
+.container .report .item:nth-child(4) {
+  background-color: hsl(145deg, 58%, 55%);
+}
+.container .report .item:nth-child(5) {
+  background-color: hsl(264deg, 64%, 52%);
+}
+.container .report .item:nth-child(5) .icon-container {
+  overflow: hidden;
+}
+.container .report .item:nth-child(5) img {
+  transform: translateY(-15%);
+}
+.container .report .item:nth-child(6) {
+  background-color: hsl(43deg, 84%, 65%);
+}
+.container .report .item .icon-container {
+  grid-row: 1/2;
+  border-radius: 20px;
+}
+.container .report .item .icon-container .svgBox {
+  position: relative;
+  width: 100%;
+}
+.container .report .item .icon-container .svgBox img {
+  width: 30%;
+  position: absolute;
+  left: 65%;
+}
+.container .report .item .item-container {
+  grid-row: 2/3;
+  border-radius: 20px;
+  background-color: hsl(235deg, 46%, 20%);
+  z-index: 1;
+  padding: 1.5rem 1rem 1rem 1.5rem;
+  display: grid;
+  grid-template-rows: 30% 1fr;
+}
+.container .report .item .item-container .daily,
+.container .report .item .item-container .monthly,
+.container .report .item .item-container .weekly {
+  grid-row: 2/3;
+}
+.container .report .item .item-container .daily {
+  display: grid;
+  grid-template-rows: auto auto;
+}
+.container .item-title {
+  position: relative;
+  font-weight: 500;
+  font-size: 1rem;
+}
+.container .item-title::after {
+  content: "🞄🞄🞄";
+  position: absolute;
+  color: hsl(235deg, 45%, 61%);
+  left: 80%;
+}
+.container .now {
+  font-weight: 300;
+  font-size: 3rem;
+}
+.container .previous {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: hsl(235deg, 45%, 61%);
 }
 .container .metadata {
   grid-column: 1/2;
   grid-row: 1/2;
   display: grid;
-  grid-template-rows: 2fr 1fr;
+  grid-template-rows: 70% 1fr;
   border-radius: 20px;
   overflow: hidden;
   background-color: hsl(235deg, 46%, 20%);
+  /* Partie haute :  photo, nom, titre */
+  /* partie basse : choix de la fréquence */
 }
 .container .metadata .user {
   background-color: hsl(246deg, 80%, 60%);
-  position: relative;
-  bottom: -5px;
-  z-index: 1;
   border-radius: 20px;
+  padding-top: 2rem;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  row-gap: 10px;
 }
-.container .metadata .user .userphoto, .container .metadata .user .username {
-  padding: 1rem;
+.container .metadata .user .userphoto,
+.container .metadata .user .username {
+  padding-left: 2rem;
+}
+.container .metadata .user .username {
+  grid-row: 2/3;
+  font-weight: 300;
+  font-size: 2.2rem;
+}
+.container .metadata .user .username span {
+  color: hsl(235deg, 45%, 61%);
+  font-weight: 500;
+  font-size: rem;
 }
 .container .metadata .user .userphoto {
+  grid-row: 1/2;
   width: 100%;
 }
 .container .metadata .user .userphoto img {
-  width: 30%;
+  width: 45%;
   border: 3px solid white;
   border-radius: 50%;
 }
@@ -65,15 +165,15 @@ body {
   width: 100%;
   display: grid;
   grid-template-rows: repeat(3, 1fr);
-  margin: 1rem 1.5rem;
-  row-gap: 20px;
+  padding: 1rem 2rem;
+  row-gap: 15px;
 }
 .container .metadata .frequency button {
   background-color: transparent;
   border: 1px solid transparent;
-  color: hsl(236deg, 100%, 87%);
+  color: hsl(235deg, 45%, 61%);
   font-family: "Rubik", sans-serif;
-  font-size: 1rem;
+  font-size: 1.1rem;
   text-align: left;
   width: 70%;
 }
@@ -86,21 +186,21 @@ body {
 .container .metadata .frequency .slctMonthly {
   grid-row: 3/4;
 }
-
-.item-title {
-  font-size: 18px;
+.container .metadata .frequency .slctDaily:focus,
+.container .metadata .frequency .slctMonthly:focus,
+.container .metadata .frequency .slctWeekly:focus {
+  color: hsl(235deg, 45%, 61%);
 }
-
-.weekly, .monthly {
+.container .weekly,
+.container .monthly {
   display: none;
 }
-
-.attribution {
+.container .attribution {
   font-size: 11px;
   text-align: center;
   color: white;
 }
-.attribution a {
+.container .attribution a {
   color: white;
 }
 

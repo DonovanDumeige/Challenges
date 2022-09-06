@@ -1,115 +1,248 @@
-@use "variables" as v;
+@use "variables"as v;
 
-*,::before,::after{
-    padding:0;
-    margin:0;
+*,
+::before,
+::after {
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     font-family: v.$rubik;
     background-color: v.$darkerblue;
-    color : v.$paleblue;
-    
+    color: v.$paleblue;
+
 }
 
-.container{
+/* Container général */
+.container {
     width: 65%;
     height: 50%;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    display : grid;
+    display: grid;
     grid-template-columns: 1fr 3fr;
-    grid-gap : 25px;
+    grid-gap: 25px;
 
-    .report{
+    /* Grid de 6 cases */
+    .report {
         grid-column: 2/3;
         display: grid;
-        grid-template-columns: repeat(3,1fr);
-        grid-template-rows: repeat(2,1fr);
-        grid-gap:25px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-gap: 25px;
 
-        .item{
-            background-color: v.$darkblue;
+        /* Un item */
+        .item {
             border-radius: 20px;
+            display: grid;
+            grid-template-rows: 16% 1fr;
+
+            &:nth-child(1) {
+                background-color: v.$orange_work;
+            }
+
+            &:nth-child(2) {
+                background-color: v.$softblue_play;
+            }
+
+            &:nth-child(3) {
+                background-color: v.$lightred_study;
+            }
+
+            &:nth-child(4) {
+                background-color: v.$limegreen_ex;
+            }
+
+            &:nth-child(5) {
+                background-color: v.$purple_social;
+                
+                .icon-container {
+                    overflow: hidden;
+                }
+
+                img {
+                    transform: translateY(-15%);
+                }
+            }
+
+            &:nth-child(6) {
+                background-color: v.$yellow_selfcare;
+            }
+
+            .icon-container {
+                grid-row: 1/2;
+                border-radius: 20px;
+
+                .svgBox {
+                    position: relative;
+                    width: 100%;
+
+                    img {
+                        width: 30%;
+                        position: absolute;
+                        left: 65%;
+                    }
+                }
+            }
+
+            .item-container {
+                grid-row: 2/3;
+                border-radius: 20px;
+                background-color: v.$darkblue;
+                z-index: 1;
+                padding: 1.5rem 1rem 1rem 1.5rem;
+                display: grid;
+                grid-template-rows: 30% 1fr;
+
+                .daily,
+                .monthly,
+                .weekly {
+                    grid-row: 2/3;
+                }
+
+                .daily {
+                    display: grid;
+                    grid-template-rows: auto auto;
+                }
+
+            }
         }
     }
 
-    .metadata{
+    /* A l'intérieur d'un item de la grille :
+    modifier daily, weekly, monthly */
+    .item-title {
+        position: relative;
+        font-weight: 500;
+        font-size: 1rem;
+
+        &::after {
+            content: "\1F784 \1F784 \1F784 ";
+            position: absolute;
+            color: v.$desaturedblue;
+            left: 80%;
+        }
+    }
+
+    .now {
+        font-weight: 300;
+        font-size: 3rem;
+    }
+
+    .previous {
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: v.$desaturedblue;
+    }
+
+    /* Colonnes de deux cases */
+    .metadata {
         grid-column: 1/2;
         grid-row: 1/2;
-        display:grid;
-        grid-template-rows: 2fr 1fr;
+        display: grid;
+        grid-template-rows: 70% 1fr;
         border-radius: 20px;
         overflow: hidden;
         background-color: v.$darkblue;
 
-        .user{
-            background-color: v.$blue_work;
-            position: relative;
-            bottom : -5px;
-            z-index: 1;
+        /* Partie haute :  photo, nom, titre */
+        .user {
+            background-color: v.$blue;
             border-radius: 20px;
+            padding-top: 2rem;
+            display: grid;
+            grid-template-rows: auto 1fr;
+            row-gap: 10px;
 
-            .userphoto, .username{
-                padding :1rem;
+            .userphoto,
+            .username {
+                padding-left: 2rem;
             }
 
-            .userphoto{
-                width:100%;
-                img{
-                    width:30%;
-                    border:3px solid white;
-                    border-radius:50%;
+            .username {
+                grid-row: 2/3;
+                font-weight: 300;
+                font-size: 2.2rem;
+
+                span {
+                    color: v.$desaturedblue;
+                    font-weight: 500;
+                    font-size: rem;
+                }
+            }
+
+            .userphoto {
+                grid-row: 1/2;
+                width: 100%;
+
+                img {
+                    width: 45%;
+                    border: 3px solid white;
+                    border-radius: 50%;
                 }
             }
 
 
         }
-        .frequency{
+
+        /* partie basse : choix de la fréquence */
+        .frequency {
             background-color: v.$darkblue;
-            width : 100%;
+            width: 100%;
             display: grid;
             grid-template-rows: repeat(3, 1fr);
-            margin : 1rem 1.5rem;
-            row-gap : 20px;
+            padding: 1rem 2rem;
+            row-gap: 15px;
 
-            button{
+            button {
                 background-color: transparent;
                 border: 1px solid transparent;
-                color : v.$paleblue;
+                color: v.$desaturedblue;
                 font-family: v.$rubik;
-                font-size: 1rem;
+                font-size: 1.1rem;
                 text-align: left;
-                width : 70%;
-                }
-            .slctDaily{
+                width: 70%;
+            }
+
+            .slctDaily {
                 grid-row: 1/2;
             }
-            .slctWeekly{
-                grid-row : 2/3;
+
+            .slctWeekly {
+                grid-row: 2/3;
             }
-            .slctMonthly{
+
+            .slctMonthly {
                 grid-row: 3/4;
             }
+
+            .slctDaily,
+            .slctMonthly,
+            .slctWeekly {
+                &:focus {
+                    color: v.$desaturedblue
+                }
             }
         }
-}
+    }
 
-.item-title{
-    font-size: 18px;
 
-}
-.weekly, .monthly{
-    display:none;
-}
+    .weekly,
+    .monthly {
+        display: none;
+    }
 
-.attribution { 
-    font-size: 11px; 
-    text-align: center;
-    color: white;
-    a { 
-        color: white; 
+    .attribution {
+        font-size: 11px;
+        text-align: center;
+        color: white;
+
+        a {
+            color: white;
+        }
     }
 }

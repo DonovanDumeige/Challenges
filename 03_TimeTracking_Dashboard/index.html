@@ -1,155 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Time tracking dashboard</title>
   <link rel="stylesheet" href="./assets/style/style.css">
 
 </head>
+
 <body>
 
   <div class="container">
 
     <main class="report">
       <!-- Work -->
-  <div class="work item">
-    <h3 class="item-title">Work</h3>
-    <!-- Daily -->
-    <div class="daily">
-      <p class="now">5hrs</p>
-      <p class="previous">Last day- 7hrs </p>
-    </div>
+      <div class="work item">
+        <div class="icon-container work-i">
+          <div class="svgBox">
+            <img src="./assets/images/icon-work.svg" alt="">
+          </div>
+        </div>
+        <div class="item-container">
+          <h3 class="item-title">Work</h3>
+          <!-- Daily -->
+          <div class="daily">
+            <p class="now">5hrs</p>
+            <p class="previous">Last day - 7hrs </p>
+          </div>
 
-    <!-- Weekly -->
-    <div class="weekly">
-      <p class="now"> 32hrs</p>
-      <p class="previous"> Last week - 36hrs</p>
-    </div>
+          <!-- Weekly -->
+          <div class="weekly">
+            <p class="now"> 32hrs</p>
+            <p class="previous"> Last week - 36hrs</p>
+          </div>
 
-    <!-- Monthly -->
-    <div class="monthly">
-      <p class="now"> 103hrs</p>
-      <p class="previous">  Last month - 128hrs</p>
-    </div>
-  </div>
+          <!-- Monthly -->
+          <div class="monthly">
+            <p class="now"> 103hrs</p>
+            <p class="previous"> Last month - 128hrs</p>
+          </div>
+        </div>
+      </div>
 
-<!-- Play -->
-  <div class="play item">
-    <h3 class="item-title">Play</h3>
+      <!-- Play -->
+      <div class="play item">
+        <div class="icon-container">
+          <div class="svgBox">
+            <img src="./assets/images/icon-play.svg" alt="">
+          </div>
+        </div>
 
-    <!-- Daily -->
-    <div class="daily">
-      <p class="now">1hr</p>
-      <p class="previous">Last day - 2hrs</p>
-    </div>
+        <div class="item-container">
+          <h3 class="item-title">Play</h3>
 
-    <!-- Weekly -->
-    <div class="weekly">
-      <p class="now">10hrs</p>
-      <p class="previous">Last week - 8hrs</p>
-    </div>
+          <!-- Daily -->
+          <div class="daily">
+            <p class="now">1hr</p>
+            <p class="previous">Last day - 2hrs</p>
+          </div>
 
-    <!-- Monthly -->
-    <div class="monthly">
-      <p class="now">23hrs</p>
-      <p class="previous">Last month - 29hrs</p>
-    </div>
-  </div>
+          <!-- Weekly -->
+          <div class="weekly">
+            <p class="now">10hrs</p>
+            <p class="previous">Last week - 8hrs</p>
+          </div>
 
-<!-- Study -->
-  <div class="study item">
-    <h3 class="item-title">Study</h3>
+          <!-- Monthly -->
+          <div class="monthly">
+            <p class="now">23hrs</p>
+            <p class="previous">Last month - 29hrs</p>
+          </div>
+        </div>
+      </div>
 
-    <!-- Daily -->
-    <div class="daily">
-      <p class="now">0hr</p>
-      <p class="previous">Last day - 1hr</p>
-    </div>
+      <!-- Study -->
+      <div class="study item">
+        <div class="icon-container play-i">
+          <div class="svgBox">
+            <img src="./assets/images/icon-study.svg" alt="">
+          </div>
+        </div>
 
-    <!-- Weekly -->
-    <div class="weekly">
-      <p class="now">4hrs</p>
-      <p class="previous">Last week - 7hrs</p>
-    </div>
+        <div class="item-container">
+          <h3 class="item-title">Study</h3>
 
-    <!-- Monthly -->
-    <div class="monthly">
-      <p class="now"> 13hrs</p>
-      <p class="previous"> Last month - 19hrs</p>
-    </div>
-  </div>
+          <!-- Daily -->
+          <div class="daily">
+            <p class="now">0hr</p>
+            <p class="previous">Last day - 1hr</p>
+          </div>
 
-<!-- Exercise -->
-  <div class="exercise item">
-    <h3 class="item-title">Exercise</h3>
+          <!-- Weekly -->
+          <div class="weekly">
+            <p class="now">4hrs</p>
+            <p class="previous">Last week - 7hrs</p>
+          </div>
 
-    <!-- Daily -->
-    <div class="daily">
-      <p class="now">1hr</p>
-      <p class="previous">Last day - 1hr</p>
-    </div>
+          <!-- Monthly -->
+          <div class="monthly">
+            <p class="now"> 13hrs</p>
+            <p class="previous"> Last month - 19hrs</p>
+          </div>
+        </div>
+      </div>
 
-    <!-- Weekly -->
-    <div class="weekly">
-      <p class="now">4hrs</p>
-      <p class="previous"> Last week - 5hrs</p>
-    </div>
+      <!-- Exercise -->
+      <div class="exercise item">
+        <div class="icon-container">
+          <div class="svgBox">
+            <img src="./assets/images/icon-exercise.svg" alt="">
+          </div>
+        </div>
 
-    <!-- Monthly -->
-    <div class="monthly">
-      <p class="now">11hrs</p>
-      <p class="previous">Last month - 18hrs</p>
-    </div>
-  </div>
+        <div class="item-container exerc-i">
+          <h3 class="item-title">Exercise</h3>
 
-<!-- Social -->
-  <div class="social item">
-    <h3 class="item-title">Social</h3>
+          <!-- Daily -->
+          <div class="daily">
+            <p class="now">1hr</p>
+            <p class="previous">Last day - 1hr</p>
+          </div>
 
-    <!-- Daily -->
-    <div class="daily">
-      <p class="now">1hr</p>
-      <p class="previous"> Last day - 3hrs</p>
-    </div>
+          <!-- Weekly -->
+          <div class="weekly">
+            <p class="now">4hrs</p>
+            <p class="previous"> Last week - 5hrs</p>
+          </div>
 
-    <!-- Weekly -->
-    <div class="weekly">
-      <p class="now">  5hrs</p>
-      <p class="previous"> Last week- 10hrs</p>
-    </div>
+          <!-- Monthly -->
+          <div class="monthly">
+            <p class="now">11hrs</p>
+            <p class="previous">Last month - 18hrs</p>
+          </div>
+        </div>
+      </div>
 
-    <!-- Monthly -->
-    <div class="monthly">
-      <p class="now">21hrs</p>
-      <p class="previous"> Last month - 23hrs</p>
-    </div>
-  </div>
+      <!-- Social -->
+      <div class="social item">
+        <div class="icon-container social-i">
+          <div class="svgBox">
+            <img src="./assets/images/icon-social.svg" alt="">
+          </div>
+        </div>
 
-<!-- Self Care -->
-  <div class="self-care item">
-    <h3 class="item-title">Self Care</h3>
+        <div class="item-container">
+          <h3 class="item-title">Social</h3>
 
-      <!-- Daily -->
-    <div class="daily">
-      <p class="now">0hrs</p>
-      <p class="previous">  Last day - 1hr </p>
-    </div>
+          <!-- Daily -->
+          <div class="daily">
+            <p class="now">1hr</p>
+            <p class="previous"> Last day - 3hrs</p>
+          </div>
 
-    <!-- Weekly -->
-    <div class="weekly">
-      <p class="now">2hrs</p>
-      <p class="previous">Last week - 2hrs</p>
-    </div>
+          <!-- Weekly -->
+          <div class="weekly">
+            <p class="now"> 5hrs</p>
+            <p class="previous"> Last week- 10hrs</p>
+          </div>
 
-    <!-- Monthly -->
-    <div class="monthly">
-      <p class="now">7hrs</p>
-      <p class="previous">Last month - 11hrs</p>
-    </div>
-</div>
+          <!-- Monthly -->
+          <div class="monthly">
+            <p class="now">21hrs</p>
+            <p class="previous"> Last month - 23hrs</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Self Care -->
+      <div class="self-care item">
+        <div class="icon-container slfcr-i">
+          <div class="svgBox">
+            <img src="./assets/images/icon-self-care.svg" alt="">
+          </div>
+        </div>
+        <div class="item-container">
+          <h3 class="item-title">Self Care</h3>
+          <!-- Daily -->
+          <div class="daily">
+            <p class="now">0hrs</p>
+            <p class="previous"> Last day - 1hr </p>
+          </div>
+
+          <!-- Weekly -->
+          <div class="weekly">
+            <p class="now">2hrs</p>
+            <p class="previous">Last week - 2hrs</p>
+          </div>
+
+          <!-- Monthly -->
+          <div class="monthly">
+            <p class="now">7hrs</p>
+            <p class="previous">Last month - 11hrs</p>
+          </div>
+        </div>
+      </div>
     </main>
 
     <aside class="metadata">
@@ -159,33 +206,34 @@
           <img src="./assets/images/image-jeremy.png" alt="">
         </div>
         <h2 class="username">
-          <span>Report for</span>
+          <span>Report for</span><br>
           Jeremy Robson
         </h2>
       </div>
 
 
-      
-        <div class="frequency">
-          <button class ="slctDaily">Daily</button>
-          <button class="slctWeekly">Weekly</button>
-          <button class="slctMonthly">Monthly</button>
-        </div>
+
+      <div class="frequency">
+        <button class="slctDaily">Daily</button>
+        <button class="slctWeekly">Weekly</button>
+        <button class="slctMonthly">Monthly</button>
+      </div>
 
     </aside>
 
   </div>
 
 
-<!-- todo Essayer de faire la logique en full CSS en premier lieu
+  <!-- todo Essayer de faire la logique en full CSS en premier lieu
 todo puis faire en JS par la suite -->
 
 
 
-  
+
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
   </div>
 </body>
+
 </html>
