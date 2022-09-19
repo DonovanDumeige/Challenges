@@ -74,6 +74,7 @@ body {
 .container .report .item .icon-container .svgBox {
   position: relative;
   width: 100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 .container .report .item .icon-container .svgBox img {
   width: 30%;
@@ -148,8 +149,8 @@ body {
 }
 .container .metadata .user .username span {
   color: hsl(235deg, 45%, 61%);
-  font-weight: 500;
-  font-size: rem;
+  font-weight: 400;
+  font-size: 1rem;
 }
 .container .metadata .user .userphoto {
   grid-row: 1/2;
@@ -176,6 +177,7 @@ body {
   font-size: 1.1rem;
   text-align: left;
   width: 70%;
+  cursor: pointer;
 }
 .container .metadata .frequency .slctDaily {
   grid-row: 1/2;
@@ -189,7 +191,7 @@ body {
 .container .metadata .frequency .slctDaily:focus,
 .container .metadata .frequency .slctMonthly:focus,
 .container .metadata .frequency .slctWeekly:focus {
-  color: hsl(235deg, 45%, 61%);
+  color: hsl(236deg, 100%, 87%);
 }
 .container .weekly,
 .container .monthly {

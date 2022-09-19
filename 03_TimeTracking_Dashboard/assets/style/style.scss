@@ -80,7 +80,7 @@ body {
                 .svgBox {
                     position: relative;
                     width: 100%;
-
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
                     img {
                         width: 30%;
                         position: absolute;
@@ -170,8 +170,8 @@ body {
 
                 span {
                     color: v.$desaturedblue;
-                    font-weight: 500;
-                    font-size: rem;
+                    font-weight: 400;
+                    font-size: 1rem;
                 }
             }
 
@@ -206,6 +206,7 @@ body {
                 font-size: 1.1rem;
                 text-align: left;
                 width: 70%;
+                cursor : pointer;
             }
 
             .slctDaily {
@@ -224,7 +225,7 @@ body {
             .slctMonthly,
             .slctWeekly {
                 &:focus {
-                    color: v.$desaturedblue
+                    color: v.$paleblue;
                 }
             }
         }
