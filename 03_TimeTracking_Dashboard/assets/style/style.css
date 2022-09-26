@@ -29,6 +29,7 @@ body {
   /* A l'intérieur d'un item de la grille :
   modifier daily, weekly, monthly */
   /* Colonnes de deux cases */
+  /* fin metadata */
 }
 .container .report {
   grid-column: 2/3;
@@ -129,6 +130,7 @@ body {
   background-color: hsl(235deg, 46%, 20%);
   /* Partie haute :  photo, nom, titre */
   /* partie basse : choix de la fréquence */
+  /* fin frequency */
 }
 .container .metadata .user {
   background-color: hsl(246deg, 80%, 60%);
@@ -146,9 +148,10 @@ body {
   grid-row: 2/3;
   font-weight: 300;
   font-size: 2.2rem;
+  color: white;
 }
 .container .metadata .user .username span {
-  color: hsl(235deg, 45%, 61%);
+  color: hsl(236deg, 100%, 87%);
   font-weight: 400;
   font-size: 1rem;
 }
@@ -168,6 +171,7 @@ body {
   grid-template-rows: repeat(3, 1fr);
   padding: 1rem 2rem;
   row-gap: 15px;
+  /* fin selectMonthly */
 }
 .container .metadata .frequency button {
   background-color: transparent;
@@ -179,18 +183,25 @@ body {
   width: 70%;
   cursor: pointer;
 }
+.container .metadata .frequency .slctDaily, .container .metadata .frequency .slctMonthly, .container .metadata .frequency .slctWeekly {
+  cursor: pointer;
+}
 .container .metadata .frequency .slctDaily {
   grid-row: 1/2;
+}
+.container .metadata .frequency .slctDaily:focus {
+  color: hsl(236deg, 100%, 87%);
 }
 .container .metadata .frequency .slctWeekly {
   grid-row: 2/3;
 }
+.container .metadata .frequency .slctWeekly:focus {
+  color: hsl(236deg, 100%, 87%);
+}
 .container .metadata .frequency .slctMonthly {
   grid-row: 3/4;
 }
-.container .metadata .frequency .slctDaily:focus,
-.container .metadata .frequency .slctMonthly:focus,
-.container .metadata .frequency .slctWeekly:focus {
+.container .metadata .frequency .slctMonthly:focus {
   color: hsl(236deg, 100%, 87%);
 }
 .container .weekly,
