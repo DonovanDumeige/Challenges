@@ -229,16 +229,12 @@ body {
 @media screen and (max-width: 945px) {
   .container {
     width: 90%;
-    position: static;
-    transform: translate(0, 0);
-    top: 0;
-    left: 0;
   }
   .container .metadata .user {
     grid-template-rows: 45% 1fr;
   }
   .container .metadata .user .username {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
   .container .metadata .user .userphoto img {
     width: 50%;
@@ -251,6 +247,7 @@ body {
   .container .report {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
+    grid-gap: 40px;
   }
   .container .metadata {
     grid-template-rows: 60% auto;
@@ -267,9 +264,21 @@ body {
     width: 60%;
   }
 }
+@media screen and (max-width: 800px) {
+  .container .metadata .user .userphoto img {
+    width: 65%;
+  }
+  .container .metadata .user .username {
+    font-size: 1.4rem;
+  }
+}
 @media screen and (max-width: 620px) {
   .container {
     width: 90%;
+    position: static;
+    transform: translate(0, 0);
+    top: 0;
+    left: 0;
     display: 200vh;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 7fr;
