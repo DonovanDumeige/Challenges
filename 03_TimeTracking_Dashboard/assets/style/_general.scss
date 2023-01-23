@@ -9,6 +9,7 @@
 }
 
 body {
+    font-size: 15px;
     font-family: v.$rubik;
     background-color: v.$darkerblue;
     color: v.$paleblue;
@@ -18,7 +19,6 @@ body {
 /* Container général */
 .container {
     width: 65%;
-    height: 50%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -39,7 +39,7 @@ body {
         .item {
             border-radius: 20px;
             display: grid;
-            grid-template-rows: 16% 1fr;
+            grid-template-rows: 20% 1fr;
 
             &:nth-child(1) {
                 background-color: v.$orange_work;
@@ -119,18 +119,11 @@ body {
         position: relative;
         font-weight: 500;
         font-size: 1rem;
-
-        &::after {
-            content: "\22EF";
-            position: absolute;
-            color: v.$desaturedblue;
-            left: 80%;
-        }
     }
 
     .now {
         font-weight: 300;
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 
     .previous {
@@ -144,7 +137,7 @@ body {
         grid-column: 1/2;
         grid-row: 1/2;
         display: grid;
-        grid-template-rows: 70% 1fr;
+        grid-template-rows: 65% 1fr;
         border-radius: 20px;
         overflow: hidden;
         background-color: v.$darkblue;
@@ -155,18 +148,18 @@ body {
             border-radius: 20px;
             padding-top: 2rem;
             display: grid;
-            grid-template-rows: auto 1fr;
+            grid-template-rows: 40% 1fr;
             row-gap: 10px;
 
             .userphoto,
             .username {
-                padding-left: 2rem;
+                padding-left: 1.8rem;
             }
 
             .username {
                 grid-row: 2/3;
                 font-weight: 300;
-                font-size: 2.2rem;
+                font-size: 1.7rem;
                 color : white;
                 span {
                     color: v.$paleblue;
@@ -203,7 +196,7 @@ body {
                 border: 1px solid transparent;
                 color: v.$desaturedblue;
                 font-family: v.$rubik;
-                font-size: 1.1rem;
+                font-size: 1rem;
                 text-align: left;
                 width: 70%;
                 cursor : pointer;

@@ -9,6 +9,7 @@
 }
 
 body {
+  font-size: 15px;
   font-family: "Rubik", sans-serif;
   background-color: hsl(226deg, 43%, 10%);
   color: hsl(236deg, 100%, 87%);
@@ -17,7 +18,6 @@ body {
 /* Container général */
 .container {
   width: 65%;
-  height: 50%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -42,7 +42,7 @@ body {
 .container .report .item {
   border-radius: 20px;
   display: grid;
-  grid-template-rows: 16% 1fr;
+  grid-template-rows: 20% 1fr;
 }
 .container .report .item:nth-child(1) {
   background-color: hsl(15deg, 100%, 70%);
@@ -105,15 +105,9 @@ body {
   font-weight: 500;
   font-size: 1rem;
 }
-.container .item-title::after {
-  content: "⋯";
-  position: absolute;
-  color: hsl(235deg, 45%, 61%);
-  left: 80%;
-}
 .container .now {
   font-weight: 300;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 .container .previous {
   font-size: 0.9rem;
@@ -124,7 +118,7 @@ body {
   grid-column: 1/2;
   grid-row: 1/2;
   display: grid;
-  grid-template-rows: 70% 1fr;
+  grid-template-rows: 65% 1fr;
   border-radius: 20px;
   overflow: hidden;
   background-color: hsl(235deg, 46%, 20%);
@@ -137,17 +131,17 @@ body {
   border-radius: 20px;
   padding-top: 2rem;
   display: grid;
-  grid-template-rows: auto 1fr;
+  grid-template-rows: 40% 1fr;
   row-gap: 10px;
 }
 .container .metadata .user .userphoto,
 .container .metadata .user .username {
-  padding-left: 2rem;
+  padding-left: 1.8rem;
 }
 .container .metadata .user .username {
   grid-row: 2/3;
   font-weight: 300;
-  font-size: 2.2rem;
+  font-size: 1.7rem;
   color: white;
 }
 .container .metadata .user .username span {
@@ -178,7 +172,7 @@ body {
   border: 1px solid transparent;
   color: hsl(235deg, 45%, 61%);
   font-family: "Rubik", sans-serif;
-  font-size: 1.1rem;
+  font-size: 1rem;
   text-align: left;
   width: 70%;
   cursor: pointer;
@@ -217,40 +211,122 @@ body {
   color: white;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1200px) {
+  .container {
+    margin: 1rem auto;
+    width: 80%;
+  }
+  .container .metadata .user {
+    grid-template-rows: 40% 1fr;
+  }
+  .container .metadata .user .username {
+    font-size: 2rem;
+  }
+  .container .metadata .user .userphoto img {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 945px) {
   .container {
     width: 90%;
-    height: 100vh;
+    position: static;
+    transform: translate(0, 0);
+    top: 0;
+    left: 0;
+  }
+  .container .metadata .user {
+    grid-template-rows: 45% 1fr;
+  }
+  .container .metadata .user .username {
+    font-size: 1.5rem;
+  }
+  .container .metadata .user .userphoto img {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 835px) {
+  .container {
+    width: 90%;
+  }
+  .container .report {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  .container .metadata {
+    grid-template-rows: 60% auto;
+  }
+  .container .metadata .user {
+    grid-template-rows: 45% 1fr;
+    row-gap: 10px;
+    justify-content: center;
+  }
+  .container .metadata .user .username {
+    font-size: 1.5rem;
+  }
+  .container .metadata .user .userphoto img {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 620px) {
+  .container {
+    width: 90%;
+    display: 200vh;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 7fr;
   }
   .container .report {
     grid-column: 1/2;
     grid-row: 2/3;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+  }
+  .container .report .item .icon-container .svgBox img {
+    width: 20%;
+    left: 75%;
+  }
+  .container .report .item .item-container .daily {
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
   }
   .container .metadata {
     grid-column: 1/2;
     grid-row: 1/2;
-    grid-template-rows: 45% 1fr;
+    grid-template-rows: 65% 1fr;
   }
   .container .metadata .user {
     row-gap: 5px;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+    padding-top: 1rem;
+    align-items: center;
   }
   .container .metadata .user .userphoto {
-    width: 45%;
+    grid-column: 1/2;
+  }
+  .container .metadata .user .userphoto img {
+    width: 60%;
   }
   .container .metadata .user .username {
-    font-size: 1.2rem;
+    align-self: center;
+    grid-row: 1/2;
+    grid-column: 2/3;
+    font-size: 1.6rem;
+    line-height: 20px;
   }
   .container .metadata .user .username span {
-    font-size: 0.7rem;
+    font-size: 1rem;
   }
   .container .metadata .frequency {
     grid-template-rows: 1fr;
     grid-template-columns: repeat(3, 1fr);
+    font-size: 1.3rem;
   }
-  .container .metadata .frequency .slctDaily, .container .metadata .frequency .slctWeekly, .container .metadata .frequency .slctMonthly {
+  .container .metadata .frequency .slctDaily,
+.container .metadata .frequency .slctWeekly,
+.container .metadata .frequency .slctMonthly {
     grid-row: 1/2;
+    text-align: center;
   }
   .container .metadata .frequency .slctDaily {
     grid-column: 1/2;
@@ -260,6 +336,69 @@ body {
   }
   .container .metadata .frequency .slctMonthly {
     grid-column: 3/4;
+  }
+}
+@media screen and (max-width: 500px) {
+  .container .metadata {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    grid-template-rows: 65% 1fr;
+  }
+  .container .metadata .user {
+    row-gap: 5px;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+    padding-top: 1rem;
+    align-items: center;
+  }
+  .container .metadata .user .userphoto {
+    grid-column: 1/2;
+  }
+  .container .metadata .user .userphoto img {
+    width: 80%;
+  }
+  .container .metadata .user .username {
+    align-self: center;
+    grid-row: 1/2;
+    grid-column: 2/3;
+    font-size: 1.6rem;
+    line-height: 20px;
+  }
+  .container .metadata .user .username span {
+    font-size: 1rem;
+  }
+  .container .metadata .frequency {
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    font-size: 1.3rem;
+  }
+  .container .metadata .frequency .slctDaily,
+.container .metadata .frequency .slctWeekly,
+.container .metadata .frequency .slctMonthly {
+    grid-row: 1/2;
+    text-align: center;
+  }
+  .container .metadata .frequency .slctDaily {
+    grid-column: 1/2;
+  }
+  .container .metadata .frequency .slctWeekly {
+    grid-column: 2/3;
+  }
+  .container .metadata .frequency .slctMonthly {
+    grid-column: 3/4;
+  }
+}
+@media screen and (max-width: 390px) {
+  .container .metadata .user .userphoto img {
+    width: 100%;
+  }
+  .container .metadata .user .username {
+    font-size: 1.4rem;
+  }
+}
+@media screen and (max-width: 340px) {
+  .container .metadata .user .username {
+    font-size: 1.25rem;
   }
 }
 

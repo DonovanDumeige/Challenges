@@ -1,57 +1,290 @@
-@media screen and (max-width: 600px) {
+@media screen and (max-width:1200px) {
     .container {
-        width: 90%;
-        height: 100vh;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
+        margin: 1rem auto;
+        width: 80%;
 
-        
-    .report {
-        grid-column: 1/2;
-        grid-row: 2/3;
+        .metadata {
+            .user {
+                grid-template-rows: 40% 1fr;
+
+                .username {
+                    font-size: 2rem;
+                }
+
+                .userphoto {
+                    img {
+                        width: 45%;
+                    }
+                }
+            }
+
+        }
     }
 
-    .metadata {
-        grid-column: 1/2;
-        grid-row: 1/2;
-        grid-template-rows: 45% 1fr;
+}
 
-        .user{
-            row-gap: 5px;
+@media screen and (max-width:945px) {
+    .container {
+        width: 90%;
+        position: static;
+        transform: translate(0, 0);
+        top: 0;
+        left: 0;
 
-            .userphoto{
-                width: 45%;
+        .metadata {
+            .user {
+                grid-template-rows: 45% 1fr;
+
+                .username {
+                    font-size: 1.5rem;
+                }
+
+                .userphoto {
+                    img {
+                        width: 50%;
+                    }
+                }
             }
-            .username{
-                font-size: 1.2rem;
-                span {
-                    font-size: 0.7rem;;
+
+        }
+    }
+
+}
+
+@media screen and (max-width:835px) {
+    .container {
+        width: 90%;
+
+        .report {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+        }
+
+        .metadata {
+            grid-template-rows: 60% auto;
+
+            .user {
+                grid-template-rows: 45% 1fr;
+                row-gap: 10px;
+                justify-content: center;
+
+                .username {
+                    font-size: 1.5rem;
+                }
+
+                .userphoto {
+                    img {
+                        width: 60%;
+                    }
+                }
+            }
+
+        }
+    }
+
+}
+
+@media screen and (max-width: 620px) {
+    .container {
+        width: 90%;
+        display: 200vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 7fr;
+
+
+
+        .report {
+            grid-column: 1/2;
+            grid-row: 2/3;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(6, 1fr);
+
+            .item {
+                .icon-container {
+                    .svgBox {
+                        img {
+                            width: 20%;
+                            left: 75%;
+                        }
+                    }
+                }
+
+                .item-container {
+                    .daily {
+                        grid-template-rows: 1fr;
+                        grid-template-columns: 1fr 1fr;
+                        align-items: center;
+                    }
+                }
+            }
+
+        }
+
+        .metadata {
+            grid-column: 1/2;
+            grid-row: 1/2;
+            grid-template-rows: 65% 1fr;
+
+            .user {
+                row-gap: 5px;
+                grid-template-columns: 1fr 2fr;
+                grid-template-rows: 1fr;
+                padding-top: 1rem;
+                align-items: center;
+
+
+                .userphoto {
+                    grid-column: 1/2;
+
+                    img {
+                        width: 60%;
+                    }
+                }
+
+                .username {
+                    align-self: center;
+                    grid-row: 1/2;
+                    grid-column: 2/3;
+                    font-size: 1.6rem;
+                    line-height: 20px;
+
+                    span {
+                        font-size: 1rem;
+                        ;
+                    }
+                }
+            }
+
+            .frequency {
+                grid-template-rows: 1fr;
+                grid-template-columns: repeat(3, 1fr);
+                font-size: 1.3rem;
+
+                .slctDaily,
+                .slctWeekly,
+                .slctMonthly {
+                    grid-row: 1/2;
+                    text-align: center;
+                }
+
+                .slctDaily {
+                    grid-column: 1/2;
+                }
+
+                .slctWeekly {
+                    grid-column: 2/3;
+                }
+
+                .slctMonthly {
+                    grid-column: 3/4;
                 }
             }
         }
+    }
+}
 
-        .frequency{
-            grid-template-rows:1fr;
-            grid-template-columns: repeat(3, 1fr);
+@media screen and (max-width: 500px) {
+    .container {
 
-            .slctDaily, .slctWeekly, .slctMonthly {
-                grid-row: 1/2;
+        .metadata {
+            grid-column: 1/2;
+            grid-row: 1/2;
+            grid-template-rows: 65% 1fr;
+
+            .user {
+                row-gap: 5px;
+                grid-template-columns: 1fr 2fr;
+                grid-template-rows: 1fr;
+                padding-top: 1rem;
+                align-items: center;
+
+
+                .userphoto {
+                    grid-column: 1/2;
+
+                    img {
+                        width: 80%;
+                    }
+                }
+
+                .username {
+                    align-self: center;
+                    grid-row: 1/2;
+                    grid-column: 2/3;
+                    font-size: 1.6rem;
+                    line-height: 20px;
+
+                    span {
+                        font-size: 1rem;
+                        ;
+                    }
+                }
             }
-            .slctDaily{
-                grid-column: 1/2;
-            }
 
-            .slctWeekly{
-                grid-column: 2/3;
-            }
+            .frequency {
+                grid-template-rows: 1fr;
+                grid-template-columns: repeat(3, 1fr);
+                font-size: 1.3rem;
 
-            .slctMonthly{
-                grid-column: 3/4;
+                .slctDaily,
+                .slctWeekly,
+                .slctMonthly {
+                    grid-row: 1/2;
+                    text-align: center;
+                }
+
+                .slctDaily {
+                    grid-column: 1/2;
+                }
+
+                .slctWeekly {
+                    grid-column: 2/3;
+                }
+
+                .slctMonthly {
+                    grid-column: 3/4;
+                }
             }
         }
     }
+}
+
+@media screen and (max-width: 390px) {
+    .container {
+
+        .metadata {
+
+            .user {
+
+                .userphoto{
+                    img{
+                        width: 100%;
+                    }
+                }
+                .username {
+                    font-size: 1.4rem;
+                }
+
+
+            }
+        }
     }
+}
+
+@media screen and (max-width: 340px) {
+    .container {
+
+        .metadata {
+
+            .user {
 
 
- 
+                .username {
+                    font-size: 1.25rem;
+                }
+
+
+            }
+        }
+    }
 }
