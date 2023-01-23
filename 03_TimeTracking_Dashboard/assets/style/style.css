@@ -106,14 +106,14 @@ body {
   font-size: 1rem;
 }
 .container .item-title::after {
-  content: "🞄🞄🞄";
+  content: "⋯";
   position: absolute;
   color: hsl(235deg, 45%, 61%);
   left: 80%;
 }
 .container .now {
   font-weight: 300;
-  font-size: 3rem;
+  font-size: 1.5rem;
 }
 .container .previous {
   font-size: 0.9rem;
@@ -215,6 +215,52 @@ body {
 }
 .container .attribution a {
   color: white;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: 90%;
+    height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .container .report {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  .container .metadata {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    grid-template-rows: 45% 1fr;
+  }
+  .container .metadata .user {
+    row-gap: 5px;
+  }
+  .container .metadata .user .userphoto {
+    width: 45%;
+  }
+  .container .metadata .user .username {
+    font-size: 1.2rem;
+  }
+  .container .metadata .user .username span {
+    font-size: 0.7rem;
+  }
+  .container .metadata .frequency {
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .container .metadata .frequency .slctDaily, .container .metadata .frequency .slctWeekly, .container .metadata .frequency .slctMonthly {
+    grid-row: 1/2;
+  }
+  .container .metadata .frequency .slctDaily {
+    grid-column: 1/2;
+  }
+  .container .metadata .frequency .slctWeekly {
+    grid-column: 2/3;
+  }
+  .container .metadata .frequency .slctMonthly {
+    grid-column: 3/4;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

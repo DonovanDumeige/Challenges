@@ -1,0 +1,57 @@
+@media screen and (max-width: 600px) {
+    .container {
+        width: 90%;
+        height: 100vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+
+        
+    .report {
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+
+    .metadata {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        grid-template-rows: 45% 1fr;
+
+        .user{
+            row-gap: 5px;
+
+            .userphoto{
+                width: 45%;
+            }
+            .username{
+                font-size: 1.2rem;
+                span {
+                    font-size: 0.7rem;;
+                }
+            }
+        }
+
+        .frequency{
+            grid-template-rows:1fr;
+            grid-template-columns: repeat(3, 1fr);
+
+            .slctDaily, .slctWeekly, .slctMonthly {
+                grid-row: 1/2;
+            }
+            .slctDaily{
+                grid-column: 1/2;
+            }
+
+            .slctWeekly{
+                grid-column: 2/3;
+            }
+
+            .slctMonthly{
+                grid-column: 3/4;
+            }
+        }
+    }
+    }
+
+
+ 
+}
