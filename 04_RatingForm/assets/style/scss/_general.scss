@@ -1,0 +1,57 @@
+@use "variables" as v;
+
+html {
+    font-family: v.$overpass;
+}
+
+body {
+    width: v.$desktop;
+    height: 100vh;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+p {
+    font-size: 15px;
+    
+}
+
+h2 {
+    font-size: 1.6rem;
+    color: v.$white;
+}
+
+p, h2 {
+    color: v.$white;
+}
+
+.attribution {
+    position: absolute;
+    bottom: 15px; 
+}
+
+.container {
+    width: 22.5%;
+    min-height: fit-content;
+    background-color: v.$vdarkblue;
+    border-radius: 25px;
+    padding: 25px 20px;
+}
+
+
+
+.title {
+    font-weight: 700;
+}
+
+.circle {
+    width: 45px;
+    height: 45px;;
+    border-radius: 50%;
+
+    background-color: v.$darkblue;
+}
+

@@ -1,0 +1,47 @@
+@use "variables" as v;
+
+
+
+.rating__wrapper {
+    border: 1px solid v.$white;
+}
+
+.rating__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 2.5rem;
+}
+
+.rating__icon img {
+    width: 35%;
+    margin: 0 auto;
+}
+
+.feedback__wrapper {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2.5rem;
+}
+
+
+.feedback__content {
+    display: inline-block;
+    width: 100%;
+    vertical-align: middle;
+
+
+    text-align: center;
+}
+.feedback__item:hover, .feedback__item:active {
+    cursor: pointer;
+}
+.feedback__item:hover {
+    background-color: v.$primary-color;
+    
+}
+
+.feedback__item:active {
+    background-color: v.$lightgrey;
+}

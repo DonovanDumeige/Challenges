@@ -1,0 +1,33 @@
+@use 'variables' as v;
+
+.btn {
+    border-radius: 50px;
+    min-height : 35px;
+    width: 100%;
+
+    text-align: center;
+    color: v.$white;
+    
+}
+
+.btn p {
+    display: inline-block;
+    vertical-align: middle;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+}
+
+.btn--orange {
+    background-color: v.$primary-color;
+}
+
+.btn:hover {
+    background-color: v.$white;
+    
+    cursor: pointer;
+}
+
+.btn:hover p {
+    color: v.$primary-color;
+}
