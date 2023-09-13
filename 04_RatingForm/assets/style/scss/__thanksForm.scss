@@ -1,0 +1,33 @@
+@use 'variables' as v;
+
+.thanks__wrapper {
+    width: calc(100% - 40px);
+    z-index: 1;
+    position: absolute;
+    top: 25px;
+    display: none;
+}
+
+.thanks__img {
+    width: 35%;
+    margin: 1rem auto 1.5rem;
+}
+
+.thanks__rate {
+    padding: 2px 15px 0;
+    width: 65%;
+    margin: 0 auto;
+    background-color: v.$darkblue;
+    min-height: 20px;
+    border-radius: 30px;
+    margin-bottom: 2rem;
+}
+.thanks__title {
+    margin-bottom: 1rem;
+}
+
+.rate__content {
+    color: v.$primary-color;
+    
+    line-height: 25px;
+}

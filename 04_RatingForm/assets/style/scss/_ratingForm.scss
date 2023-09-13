@@ -3,26 +3,23 @@
 
 
 .rating__wrapper {
-    border: 1px solid v.$white;
+    width: 100%;
+
 }
 
 .rating__icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.5rem;
 }
 
 .rating__icon img {
-    width: 35%;
+    width: 30%;
     margin: 0 auto;
 }
+
 
 .feedback__wrapper {
     display: flex;
     justify-content: space-around;
-    margin-bottom: 2.5rem;
 }
 
 
@@ -34,6 +31,7 @@
 
     text-align: center;
 }
+
 .feedback__item:hover, .feedback__item:active {
     cursor: pointer;
 }

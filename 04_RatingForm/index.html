@@ -9,7 +9,8 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="./assets/style/style.css">
 
-  <title>Frontend Mentor | Interactive rating component</title>
+  <title>04 | Rating form</title>
+  <script src="./assets/script/script.js" defer></script>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
@@ -26,64 +27,61 @@
 
 <body>
 
-  <div class="rating__wrapper container">
-    <div class="rating__icon icon circle container--flex">
-      <img src="./assets/images/icon-star.svg" alt="">
+  <div class="main__wrapper container">
+    <div class="rating__wrapper">
+      <div class="rating__icon circle container--flex mb--1-5">
+        <img src="./assets/images/icon-star.svg" alt="">
+      </div>
+
+      <h2 class="rating__title title mb--1">
+        How did we do ?
+      </h2>
+
+      <p class="rating__content content mb--1-5">
+        Please let us know how we did with your support request. All feedback is appreciated
+        to help us improve our offering !
+      </p>
+      <div class="feedback__wrapper mb--2">
+        <div class="feedback__item container--flex circle">
+          <p class="feedback__content content">1</p>
+        </div>
+        <div class="feedback__item container--flex circle">
+          <p class="feedback__content content">2</p>
+        </div>
+        <div class="feedback__item container--flex circle">
+          <p class="feedback__content content">3</p>
+        </div>
+        <div class="feedback__item container--flex circle">
+          <p class="feedback__content content">4</p>
+        </div>
+        <div class="feedback__item container--flex circle">
+          <p class="feedback__content content">5</p>
+        </div>
+      </div>
+
+      <div class="btn btn--orange container--flex">
+        <p>Submit</p>
+      </div>
     </div>
 
-    <h2 class="rating__title title">
-      How did we do ?
-    </h2>
-
-    <p class="rating__content content">
-      Please let us know how we did with your support request. All feedback is appreciated
-      to help us improve our offering !
-    </p>
-    <div class="feedback__wrapper">
-      <div class="feedback__item circle">
-        <p class="feedback__content content">1</p>
+    <div class="thanks__wrapper">
+      <div class="thanks__img">
+        <img src="./assets/images/illustration-thank-you.svg" alt="">
       </div>
-      <div class="feedback__item circle">
-        <p class="feedback__content content">2</p>
+      <div class="thanks__rate mb--2">
+        <p class="rate__content ctr">
+          You selected <span id="rate__area"></span> out of 5
+        </p>
       </div>
-      <div class="feedback__item circle">
-        <p class="feedback__content content">3</p>
+      <h2 class="thanks__title title ctr">Thank you ! </h2>
+      <div class="thanks__content content ctr">
+        <p>
+          We appreciate you taking the time to give a rating. If you ever need more support, don't hesitate to get in
+          touch !
+        </p>
       </div>
-      <div class="feedback__item circle">
-        <p class="feedback__content content">4</p>
-      </div>
-      <div class="feedback__item circle">
-        <p class="feedback__content content">5</p>
-      </div>
-    </div>
-
-    <div class="btn btn--orange">
-      <p>Submit</p>
     </div>
   </div>
-  <!-- Rating state start -->
-
-  How did we do?
-
-
-
-  1 2 3 4 5
-
-  Submit
-
-  <!-- Rating state end -->
-
-  <!-- Thank you state start -->
-
-  You selected <!-- Add rating here --> out of 5
-
-  Thank you!
-
-  We appreciate you taking the time to give a rating. If you ever need more support,
-  don’t hesitate to get in touch!
-
-  <!-- Thank you state end -->
-
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
