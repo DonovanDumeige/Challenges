@@ -8,8 +8,6 @@
  * 4. Show the rate on the area .rate__area
  */
 
-// ? First method : forEach
-
 /* 
 ! I forgot something crucial with forEach. This loop can't return a value and use a callback function as a parameter.
 ! If I try to return something, the result will be undefined.
