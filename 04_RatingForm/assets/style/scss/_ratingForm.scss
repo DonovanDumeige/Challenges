@@ -25,21 +25,19 @@
 
 .feedback__content {
     display: inline-block;
-    width: 100%;
+    padding: 10px 15px;
+    border-radius: 50%;
     vertical-align: middle;
 
 
     text-align: center;
+    background-color: v.$darkblue;
 }
 
-.feedback__item:hover, .feedback__item:active {
+.feedback__content:hover  {
     cursor: pointer;
 }
-.feedback__item:hover {
-    background-color: v.$primary-color;
+.feedback__content:hover {
+    background-color: v.$lightgrey
     
-}
-
-.feedback__item:active {
-    background-color: v.$lightgrey;
 }

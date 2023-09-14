@@ -90,6 +90,8 @@ img {
   width: 100%;
   text-align: center;
   color: hsl(0, 0%, 100%);
+  outline: transparent;
+  border: transparent;
 }
 
 .btn p {
@@ -113,14 +115,6 @@ img {
   color: hsl(25, 97%, 53%);
 }
 
-.isHidden {
-  display: none;
-}
-
-.isVisible  {
-  display: block;
-}
-
 .rating__wrapper {
   width: 100%;
 }
@@ -141,20 +135,18 @@ img {
 
 .feedback__content {
   display: inline-block;
-  width: 100%;
+  padding: 10px 15px;
+  border-radius: 50%;
   vertical-align: middle;
   text-align: center;
+  background-color: hsl(213, 19%, 18%);
 }
 
-.feedback__item:hover, .feedback__item:active {
+.feedback__content:hover {
   cursor: pointer;
 }
 
-.feedback__item:hover {
-  background-color: hsl(25, 97%, 53%);
-}
-
-.feedback__item:active {
+.feedback__content:hover {
   background-color: hsl(217, 12%, 63%);
 }
 
@@ -163,7 +155,6 @@ img {
   z-index: 1;
   position: absolute;
   top: 25px;
-  display: none;
 }
 
 .thanks__img {
@@ -188,6 +179,19 @@ img {
 .rate__content {
   color: hsl(25, 97%, 53%);
   line-height: 25px;
+}
+
+.isHidden {
+  visibility: hidden;
+}
+
+.isVisible  {
+  visibility: visible;
+}
+
+.isActive {
+  background-color: hsl(25, 97%, 53%);
+  color: hsl(0, 0%, 100%);
 }
 
 /*# sourceMappingURL=style.css.map */

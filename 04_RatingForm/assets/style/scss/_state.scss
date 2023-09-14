@@ -1,7 +1,14 @@
+@use 'variables' as v;
+
 .isHidden {
-    display: none;
+    visibility: hidden;
 }
 
 .isVisible {
-    display: block;
+   visibility: visible;
+}
+
+.isActive {
+    background-color: v.$primary-color;
+    color: v.$white
 }
