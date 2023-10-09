@@ -19,7 +19,7 @@ const thanks_wrapper = document.querySelector(".thanks__wrapper");
 const btn = document.querySelector(".btn");
 const rate_area = document.querySelector("#rate__area");
 
-let rate = null;
+let rate;
 rates.forEach((r) =>
   r.addEventListener("click", (e) => {
     // checked and unchecked behaviour
@@ -33,6 +33,7 @@ rates.forEach((r) =>
   })
 );
 
+function getValue(e) {}
 btn.addEventListener("click", () => {
   if (rate) {
     rate_area.innerText = rate;
