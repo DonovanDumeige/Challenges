@@ -1,44 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Tip calculator app</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
   </style>
 </head>
+
 <body>
 
-  Bill
+  <main class="main-wrapper">
+    <form action="" class="form-container">
+      <section class="calc-zone">
+        <article class="form-field">
+          <label for="bill" class="form-label">Bill</label>
+          <input type="number" name="bill" id="bill" class="form-input">
+        </article>
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
+        <article class="form-field">
+          <label for="tips">
 
-  Number of People
+          </label>
+          <div class="tips-container">
+            <input type="text" name="tips" value="5" class="tips-input">
+            <input type="text" name="tips" value="10" class="tips-input">
+            <input type="text" name="tips" value="15" class="tips-input">
+            <input type="text" name="tips" value="25" class="tips-input">
+            <input type="text" name="tips" value="50" class="tips-input">
+            <input type="text" name="tips" value="custom">
+          </div>
+        </article>
 
-  Tip Amount
-  / person
+        <article class="form-field">
+          <label for="people">Number of people</label>
+          <input type="text" name="people" id="people">
+        </article>
+      </section>
+      <section class="price-zone">
+        <div class="final-price tips-zone">
+          <div class="final-price-txt">
+            Tip amount <span>/ person</span>
+          </div>
+          <div class="final-price-amount">
+            $<span id=" tipPrice">0.00</span>
+          </div>
+        </div>
+        <div class="final-price tips-zone">
+          <div class="final-price-txt">
+            Total <span>/ person</span>
+          </div>
 
-  Total
-  / person
+          <div class="final-price-amount">
+            $<span id=" tipPrice">0.00</span>
+          </div>
+        </div>
+      </section>
 
-  Reset
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+    </form>
+
+    </div>
+    </m>
+
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
 </body>
+
 </html>
