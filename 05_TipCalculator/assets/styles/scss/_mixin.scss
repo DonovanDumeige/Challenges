@@ -1,7 +1,14 @@
-@mixin flexbox($dir:row, $aic:normal, $jcc:normal, $gap:0) {
+@mixin flexbox($dir, $aic:normal, $jcc:normal, $gap) {
+    display: flex;
     flex-direction: $dir;
     align-items: $aic;
     justify-content: $jcc;
     gap:$gap
+}
+
+@mixin border-radius ($br) {
+    border-radius: $br;
+    outline: 0 solid transparent;
+    border-color: transparent
 }
 

@@ -1,18 +1,30 @@
 @use 'sass:map';
 @use 'variables' as v;
 @use 'mixin' as m;
-body {
 
-    height: 98vh;
-    display:flex;
+*, ::after, ::before {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+}
+body {
     @include m.flexbox(column, center, center, 1.5rem);
     background-color: v.$light-cyan;
+    font-family: v.$form-inputs;
 }
 
-input {
-
+.main-wrapper {
+    height: calc(100% - (15px + 24px));
+    @include m.flexbox(row, center, center, 2rem);
 }
+
+
 
 footer {
-    height: 5%;
+    height: 15px;
 }
+
+

@@ -1,0 +1,65 @@
+@use 'variables' as v;
+@use 'mixin' as m;
+
+.form-container {
+
+    width: 65%;
+    min-height: 450px;
+
+    display: flex;
+    @include m.flexbox(row, $gap: 1.5rem);
+    background-color: v.$white;
+
+    padding: 60px;
+
+    border-radius: 30px;
+   
+}
+
+.calc-zone, .price-zone {
+    width: 50%;
+    flex-grow: 1;
+}
+
+
+.calc-zone:last-child {
+    margin: 0;
+}
+
+.field {
+    margin-bottom: 2rem;
+    position: relative;
+
+
+    &__label {
+        display: inline-block;
+        margin-bottom: 20px;
+       
+    }
+    &__input {
+    min-height: 50px; 
+    width: 100%;
+
+    padding: 10px;
+
+    color: v.$neutral-cyan;
+    background-color: v.$very-light-cyan;
+    @include m.border-radius(10px);
+    
+    font-family: v.$form-inputs;
+    font-size: 24px;
+    text-align: right;
+
+}
+}
+
+.placeholderIcon {
+    position:absolute;
+    bottom: 7.5px;
+    left: 10px;
+    width: 9.5px;
+}
+
+.placeholderIcon img {
+    width: 100%;
+}

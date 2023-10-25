@@ -29,30 +29,35 @@
   <main class="main-wrapper">
     <form action="" class="form-container">
       <section class="calc-zone">
-        <article class="form-field">
-          <label for="bill" class="form-label">Bill</label><br>
-          <input type="number" name="bill" id="bill" class="form-input">
+        <article class="field">
+          <div class="placeholderIcon">
+            <img src="./assets/images/icon-dollar.svg" alt="">
+          </div>
+
+          <label for="bill" class="field__label">Bill</label><br>
+          <input type="text" name="bill" id="bill" class="field__input" placeholder="0">
         </article>
 
-        <article class="form-field">
-          <label for="tips">
+        <article class="field">
+          <label for="tips" class="field__label">
             Tips
           </label>
           <div class="tips-container">
-            <input type="text" name="tips" value="5" class="tips-input">
-            <input type="text" name="tips" value="10" class="tips-input">
-            <input type="text" name="tips" value="15" class="tips-input">
-            <input type="text" name="tips" value="25" class="tips-input">
-            <input type="text" name="tips" value="50" class="tips-input">
-            <input type="text" name="tips" value="custom">
+            <input type="text" name="tips" value="5" class="field__input field__input--darkcyan">
+            <input type="text" name="tips" value="10" class="field__input field__input--darkcyan">
+            <input type="text" name="tips" value="15" class="field__input field__input--darkcyan">
+            <input type="text" name="tips" value="25" class="field__input field__input--darkcyan">
+            <input type="text" name="tips" value="50" class="field__input field__input--darkcyan">
+            <input type="text" name="tips" value="custom" class="field__input">
           </div>
         </article>
 
-        <article class="form-field">
-          <label for="people">Number of people</label> <br>
-          <input type="text" name="people" id="people">
+        <article class="field">
+          <label for="people" class="field__label">Number of people</label> <br>
+          <input type="text" name="people" id="people" placeholder="0" class="field__input">
         </article>
       </section>
+
       <section class="price-zone">
         <div class="final-price tips-zone">
           <div class="final-price-txt">
@@ -71,10 +76,12 @@
             $<span id=" tipPrice">0.00</span>
           </div>
         </div>
+
+        <button name="reset"></button>
       </section>
 
 
-      <button name="reset"></button>
+
     </form>
 
     </div>
