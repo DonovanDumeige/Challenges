@@ -21,7 +21,7 @@ body {
 }
 
 .main-wrapper {
-  height: calc(100% - 39px);
+  height: calc(100% - (15px + 1.5rem));
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -41,19 +41,15 @@ footer {
   flex-direction: row;
   align-items: normal;
   justify-content: normal;
-  gap: 1.5rem;
+  gap: 2.5rem;
   background-color: hsl(0, 0%, 100%);
-  padding: 60px;
+  padding: 45px;
   border-radius: 30px;
 }
 
 .calc-zone, .price-zone {
   width: 50%;
   flex-grow: 1;
-}
-
-.calc-zone:last-child {
-  margin: 0;
 }
 
 .field {
@@ -65,7 +61,7 @@ footer {
   margin-bottom: 20px;
 }
 .field__input {
-  min-height: 50px;
+  max-height: 50px;
   width: 100%;
   padding: 10px;
   color: hsl(184, 14%, 56%);
@@ -78,11 +74,15 @@ footer {
   text-align: right;
 }
 
+.field:last-child {
+  margin: 0;
+}
+
 .placeholderIcon {
   position: absolute;
-  bottom: 7.5px;
+  bottom: 12px;
   left: 10px;
-  width: 9.5px;
+  width: 12.5px;
 }
 
 .placeholderIcon img {
@@ -105,6 +105,13 @@ footer {
 .tips-container .field__input--darkcyan {
   color: hsl(0, 0%, 100%);
   background-color: hsl(183, 100%, 15%);
+}
+
+.price-zone {
+  background-color: hsl(183, 100%, 15%);
+  border-radius: 30px;
+  outline: 0 solid transparent;
+  border-color: transparent;
 }
 
 /*# sourceMappingURL=style.css.map */

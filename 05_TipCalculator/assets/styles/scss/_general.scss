@@ -17,7 +17,7 @@ body {
 }
 
 .main-wrapper {
-    height: calc(100% - (15px + 24px));
+    height: calc(100% - (15px + 1.5rem));
     @include m.flexbox(row, center, center, 2rem);
 }
 

@@ -1,0 +1,6 @@
+@use 'variables' as v;
+@use 'mixin' as m;
+.price-zone {
+    background-color: v.$very-dark-cyan;
+    @include m.border-radius(30px);
+}
