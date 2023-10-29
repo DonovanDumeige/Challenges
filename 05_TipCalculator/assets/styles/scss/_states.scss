@@ -1,0 +1,18 @@
+@use './variables' as v;
+
+.isActive {
+    background-color: lighten(v.$primary-color,40%)!important;
+    color: v.$very-dark-cyan !important;
+}
+
+.isSelected {
+    border: 3px solid v.$primary-color;
+}
+
+.isWrong {
+    border: 2px solid sienna;
+}
+
+.error {
+    color: sienna;
+}

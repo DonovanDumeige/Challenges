@@ -8,7 +8,7 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="./assets/styles/style.css">
-
+  <script src="./assets/scripts/main.js" defer></script>
   <title>Frontend Mentor | Tip calculator app</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -30,58 +30,78 @@
     <form action="" class="form-container">
       <section class="calc-zone">
         <article class="field">
-          <div class="placeholderIcon">
-            <img src="./assets/images/icon-dollar.svg" alt="">
+          <div class="label-container">
+            <div>
+              <span class="placeholderIcon">
+                <img src="./assets/images/icon-dollar.svg" alt="">
+              </span>
+
+              <label for="bill" class="field__label">Bill</label><br>
+            </div>
+
+            <p class="error">It can't be zero.</p>
           </div>
 
-          <label for="bill" class="field__label">Bill</label><br>
           <input type="text" name="bill" id="bill" class="field__input" placeholder="0">
         </article>
 
         <article class="field">
-          <label for="tips" class="field__label">
-            Select Tip %
-          </label>
+          <div class="label-container">
+            <label for="tips" class="field__label">
+              Select Tip %
+            </label>
+            <p class="error">Please select a value</p>
+          </div>
           <div class="tips-container">
-            <input type="text" name="tips" value="5%" class="field__input field__input--darkcyan">
-            <input type="text" name="tips" value="10%" class="field__input field__input--darkcyan">
-            <input type="text" name="tips" value="15%" class="field__input field__input--darkcyan">
-            <input type="text" name="tips" value="25%" class="field__input field__input--darkcyan">
-            <input type="text" name="tips" value="50%" class="field__input field__input--darkcyan">
-            <input type="text" name="tips" value="custom" class="field__input">
+            <button type="text" name="tips" value="5" class="field__input field__input--darkcyan">5%</button>
+            <button type="text" name="tips" value="10" class="field__input field__input--darkcyan">10%</button>
+            <button type="text" name="tips" value="15" class="field__input field__input--darkcyan">15%</button>
+            <button type="text" name="tips" value="25" class="field__input field__input--darkcyan">25%</button>
+            <button type="text" name="tips" value="50" class="field__input field__input--darkcyan">50%</button>
+            <input type="text" name="tips" value="custom" placeholder="Custom" class="field__input">
           </div>
         </article>
 
-
         <article class="field">
-          <span class="placeholderIcon">
-            <img src="./assets/images/icon-person.svg" alt="">
-          </span>
-          <label for="people" class="field__label">Number of people</label> <br>
+          <div class="label-container">
+            <div>
+              <span class="placeholderIcon">
+                <img src="./assets/images/icon-person.svg" alt="">
+              </span>
+              <label for="people" class="field__label">Number of people</label> <br>
+            </div>
+            <p class="error">It can't be zero</p>
+          </div>
+
           <input type="text" name="people" id="people" placeholder="0" class="field__input">
         </article>
       </section>
 
       <section class="price-zone">
-        <div class="final-price tips-zone">
-          <div class="final-price-txt">
-            Tip amount <span>/ person</span>
+
+        <div class="price-zone-container">
+          <div class="final-price tips-zone">
+            <div class="final-price__txt">
+              Tip amount <span>/ person</span>
+            </div>
+            <div class="final-price__amount">
+              $<span id=" tipPrice">0.00</span>
+            </div>
           </div>
-          <div class="final-price-amount">
-            $<span id=" tipPrice">0.00</span>
+          <div class="final-price tips-zone">
+            <div class="final-price__txt">
+              Total <br><span>/ person</span>
+            </div>
+
+            <div class="final-price__amount">
+              $<span id=" tipPrice">0.00</span>
+            </div>
           </div>
         </div>
-        <div class="final-price tips-zone">
-          <div class="final-price-txt">
-            Total <span>/ person</span>
-          </div>
 
-          <div class="final-price-amount">
-            $<span id=" tipPrice">0.00</span>
-          </div>
-        </div>
 
-        <button name="reset"></button>
+        <button name="reset" disabled>Reset</button>
+
       </section>
     </form>
 

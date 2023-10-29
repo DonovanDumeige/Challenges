@@ -11,6 +11,8 @@ html, body {
 }
 
 body {
+  width: 1440px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -31,6 +33,15 @@ body {
 
 footer {
   height: 15px;
+}
+
+.label-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 20px;
 }
 
 .form-container {
@@ -58,7 +69,7 @@ footer {
 }
 .field__label {
   display: inline-block;
-  margin-bottom: 20px;
+  color: hsl(186, 14%, 43%);
 }
 .field__input {
   max-height: 50px;
@@ -72,6 +83,7 @@ footer {
   font-family: "Space Mono", monospace;
   font-size: 24px;
   text-align: right;
+  cursor: pointer;
 }
 
 .field:last-child {
@@ -98,20 +110,92 @@ footer {
   flex-wrap: wrap;
 }
 .tips-container .field__input {
-  width: calc((96% - 15px) / 3);
+  width: calc((95% - 15px) / 3);
   font-size: 24px;
   text-align: center;
 }
 .tips-container .field__input--darkcyan {
   color: hsl(0, 0%, 100%);
   background-color: hsl(183, 100%, 15%);
+  padding: 5px 40px;
 }
 
 .price-zone {
+  display: flex;
+  flex-direction: column;
+  align-items: normal;
+  justify-content: space-around;
+  gap: 5rem;
+  padding: 30px;
   background-color: hsl(183, 100%, 15%);
   border-radius: 30px;
   outline: 0 solid transparent;
   border-color: transparent;
+}
+.price-zone-container {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: normal;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.price-zone button {
+  min-height: 40px;
+  padding: 10px;
+  border-radius: 10px;
+  outline: 0 solid transparent;
+  border-color: transparent;
+  background-color: #006f75;
+  outline: transparent;
+  color: hsl(183, 100%, 15%);
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}
+.price-zone button:hover {
+  background-color: #6ae2d2;
+}
+
+.final-price {
+  display: flex;
+  flex-direction: row;
+  align-items: normal;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.final-price__txt {
+  width: calc(40% - 0.5rem);
+  color: hsl(0, 0%, 100%);
+  font-size: 1.15rem;
+}
+.final-price__txt span {
+  font-size: 0.8rem;
+  color: hsl(186, 14%, 43%);
+}
+.final-price__amount {
+  width: calc(60% - 0.5rem);
+  text-align: right;
+  font-size: 3rem;
+  color: hsl(172, 67%, 45%);
+}
+
+.isActive {
+  background-color: #bff2ec !important;
+  color: hsl(183, 100%, 15%) !important;
+}
+
+.isSelected {
+  border: 3px solid hsl(172, 67%, 45%);
+}
+
+.isWrong {
+  border: 2px solid sienna;
+}
+
+.error {
+  color: sienna;
 }
 
 /*# sourceMappingURL=style.css.map */
