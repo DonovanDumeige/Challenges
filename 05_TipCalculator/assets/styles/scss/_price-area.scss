@@ -1,6 +1,52 @@
 @use 'variables' as v;
 @use 'mixin' as m;
 .price-zone {
+    @include m.flexbox(column, $jcc: space-around, $gap:5rem);
+    padding: 30px;
     background-color: v.$very-dark-cyan;
     @include m.border-radius(30px);
+    &-container {
+        height: 50%;
+        @include m.flexbox(column, $jcc: space-between, $gap:2rem)
+    }
+
+    button {
+        min-height: 40px;
+        padding: 10px; 
+
+        @include m.border-radius(10px);
+        background-color: lighten(v.$very-dark-cyan, 8%);
+        outline: transparent;
+
+        color: v.$very-dark-cyan;
+        font-size: 20px;
+        font-weight: 700;
+        text-align: center;
+        text-transform: uppercase;
+
+        &:hover {
+            background-color: lighten(v.$primary-color,20%)
+        }
+    }
 }
+
+
+.final-price {
+    @include m.flexbox(row, $jcc: space-between, $gap: 1rem);
+    &__txt {
+        width: calc(40% - .5rem);
+        color: v.$white;
+        font-size: 1.15rem;
+        span {
+            font-size: .8rem;
+            color: v.$dark-cyan;
+        }
+    }
+    &__amount {
+        width: calc(60% - .5rem);
+        text-align: right;
+        font-size: 3rem;
+        color: v.$primary-color
+    }
+}
+

@@ -4,17 +4,16 @@
 .tips-container {
     @include m.flexbox(row, $gap:15px);
     flex-wrap: wrap;
-
-    .field__input {
-        width: calc((96% - 15px) / 3);
-        font-size: 24px;
-        text-align: center;
-
-        &--darkcyan {
-            color: v.$white;
-            background-color: v.$very-dark-cyan;
+.field__input {
+    width: calc((95% - 15px) / 3);
+    font-size: 24px;
+    text-align: center;
+    &--darkcyan {
+        color: v.$white;
+        background-color: v.$very-dark-cyan;
+        padding: 5px 40px;
         }
     }
-    }
+}
     
 

@@ -11,6 +11,8 @@ html, body{
     height: 100%;
 }
 body {
+    width: 1440px;
+    margin: 0 auto;
     @include m.flexbox(column, center, center, 1.5rem);
     background-color: v.$light-cyan;
     font-family: v.$form-inputs;
@@ -27,4 +29,8 @@ footer {
     height: 15px;
 }
 
+.label-container {
+    @include m.flexbox(row, center, space-between, 30px);
+    margin-bottom: 20px;
+}
 

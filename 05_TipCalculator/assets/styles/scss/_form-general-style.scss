@@ -32,7 +32,7 @@
 
     &__label {
         display: inline-block;
-        margin-bottom: 20px;
+        color: v.$dark-cyan;
        
     }
     &__input {
@@ -48,6 +48,8 @@
     font-family: v.$form-inputs;
     font-size: 24px;
     text-align: right;
+
+    cursor: pointer;
 
 }
 }
@@ -66,3 +68,5 @@
 .placeholderIcon img {
     width: 100%;
 }
+
+
