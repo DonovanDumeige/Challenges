@@ -1,11 +1,14 @@
 "use strict";
 
-let bill, tips, people;
+let tips = document.querySelectorAll(".field__input--darkcyan");
+let isActive = false;
+console.log(tips);
+let bill, people;
 let amountTip = 0;
 let totalPrice = 0;
 
 bill = getBill(130);
-tips = chooseTips(25);
+
 people = getPeople(4);
 
 function cleanPrice(value) {
@@ -18,15 +21,21 @@ function getBill(price) {
 
 /**
  * choose an amount for tips an calculate the coefficient
- * @param {number} number to 5 at 50 or custom
+ * @param {PointerEvent} e
+ * @param {number} value to 5 at 50 or customkf
  * @returns {number}
  */
-function chooseTips(value) {
-  tips = value / 100 + 1;
-  console.log("Percent of tips = ", tips);
-  return tips;
+function chooseTips(e, value) {
+  e.preventDefault();
+  console.log(e.currentTarget);
+  if (isActive) {
+  }
+  // tips = value / 100 + 1;
+  // console.log("Percent of tips = ", tips);
+  // return tips;
 }
 
+tips.forEach((tip) => tip.addEventListener("click", chooseTips));
 function getPeople(number) {
   people = number;
   return people;
